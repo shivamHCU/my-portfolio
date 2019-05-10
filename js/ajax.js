@@ -33,10 +33,10 @@ $(function () {
     function append_response () {
       if (response["Error"]) {
         for (var i = 0; i < response["ErrorType"].length; i++) {
-          $("[data-"+ response["ErrorType"][i] +"]").addClass("kayoErrorInput").parent().append("<p class='kayoAlert kayoError'>" +  validationMessage[response["ErrorType"][i]]  +"</p>");
+          $("[data-"+ response["ErrorType"][i] +"]").addClass("shivamErrorInput").parent().append("<p class='shivamAlert shivamError'>" +  validationMessage[response["ErrorType"][i]]  +"</p>");
         }
       } else {
-        contactForm.prepend("<p class='kayoAlert kayoSuccess'>" + validationMessage["SuccessMessage"]  + "</p>");
+        contactForm.prepend("<p class='shivamAlert shivamSuccess'>" + validationMessage["SuccessMessage"]  + "</p>");
         contactForm.find("input, textarea").val("");
       }
     }
@@ -46,8 +46,8 @@ $(function () {
         sendingMessage = true;
         var thisForm = $(this);
         response = {};
-        thisForm.find(".kayoAlert").remove();
-        thisForm.addClass("kayo-submiting").find("*").removeClass("kayoErrorInput");
+        thisForm.find(".shivamAlert").remove();
+        thisForm.addClass("shivam-submiting").find("*").removeClass("shivamErrorInput");
         thisForm.find("[type=submit]").attr('disabled', 'disabled');
         var full_name     = thisForm.find("[name=full_name]").val(),
             email         = thisForm.find("[name=email]").val(),
@@ -76,14 +76,14 @@ $(function () {
           $.post('php/sendMessage.php', thisForm.serialize(),function(result) {
             response = JSON.parse(result);
             append_response();
-            thisForm.removeClass("kayo-submiting");
+            thisForm.removeClass("shivam-submiting");
             sendingMessage = false;
             thisForm.find("[type=submit]").removeAttr("disabled")
           });
         } else {
           console.log(response)
           append_response();
-          thisForm.removeClass("kayo-submiting");
+          thisForm.removeClass("shivam-submiting");
           thisForm.find("[type=submit]").removeAttr("disabled")
           sendingMessage = false;
         }
