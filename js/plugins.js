@@ -29,7 +29,7 @@ $(function () {
     if (demo2Check) {
         scrollBox = $(".sakura-demo2");
     }
-    
+
     /** Smooth Scrolling
      **====================== **/
     $(".kayo-links a,.scrollLink").on('click', function (e) {
@@ -60,10 +60,10 @@ $(function () {
         }
     });
     /** => Scroll To Top */
-    
+
     /** Make NiceScroll
      **====================== **/
-    
+
     scrollBox.niceScroll(niceScrollOptions);
     function fixNiceScroll() {
         scrollBox.getNiceScroll().resize();
@@ -72,13 +72,13 @@ $(function () {
         // fix position for the niceScroll
         fixNiceScroll();
     });
-    
+
     /** => End NiceScroll */
 
     /**  Start Typed
      **====================== **/
     $(".kayo-work").typed({
-        strings: ["Web Developer.", "Web Designer."],
+        strings: ["Web Developer.", "Application Developer"],
         cursorChar: "",
         typeSpeed: 150,
         loop: true,
@@ -139,7 +139,7 @@ $(function () {
             });
         return circle;
     }
-    
+
     $('.progressName').each(function () {
         allProgress.push({
             'circle': readyProgress($(this)),
@@ -165,7 +165,7 @@ $(function () {
     }
 
     /** START Soft Skills Progress */
-    
+
     resumeSection.on('scroll', function () {
         var offsetTop = getOffsetTop($(this), softSkills);
         if (!soft_progress_check && offsetTop < $(this).parent().height()) {
@@ -220,7 +220,7 @@ $(function () {
     /** END Technical Skills Progress */
 
     /** START facts about me counter */
-    
+
     $('.aboutMe').on('scroll', function () {
         var offsetTop = getOffsetTop($(this), $('.kayo-facts-about-me .kayo-info-list'));
         if (!factsCheck && offsetTop < $(this).parent().height()) {

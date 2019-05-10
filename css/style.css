@@ -1,7 +1,4 @@
 /*********************************************************************************************
-Project:      Sakura - Online Resume / CV HTML Template
-Version:      1.0
-Last change:  30/10/2017
 
 [ CSS Structure ]
 
@@ -2013,7 +2010,7 @@ body {
 
 /* 9.1 Contact Introduction */
 .contact .kayo-intro-section {
-  background: url("../images/contact.jpg") center bottom no-repeat fixed;
+  background: url("../images/work2.jpg") center bottom no-repeat fixed;
   background-size: cover;
 }
 
@@ -2027,7 +2024,7 @@ body {
 
 /* 9.3 Contact Form */
 .contact-form {
-  background: url("../images/contact.jpg") center bottom no-repeat fixed;
+  background: url("../images/work2.jpg") center bottom no-repeat fixed;
   background-size: cover;
 }
 .contact-form .kayo-container {
