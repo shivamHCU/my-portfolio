@@ -202,7 +202,7 @@ if (session_status() == PHP_SESSION_NONE){
                                 {
                             ?>
                                 <br><br><br>
-                                <a href="./additem/addintrest.php"><button  style="background-color: green; color: white; border: none; padding: 5px; width: 170px;"><span class="fa fa-plus" style="padding-right: 8px;font-size:15px"></span>AREA OF INTEREST</button></a>
+                                <a href="./additem/addinterest.php"><button  style="background-color: green; color: white; border: none; padding: 5px; width: 170px;"><span class="fa fa-plus" style="padding-right: 8px;font-size:15px"></span>AREA OF INTEREST</button></a>
                             <?php
                                 }
                             ?>
